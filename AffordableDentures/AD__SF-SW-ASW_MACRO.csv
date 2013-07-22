@@ -1,0 +1,417 @@
+VERSION BUILD=8300326 RECORDER=FX
+
+'CONSTANTS -->
+
+'user/pass for SF/YL
+'---------------------------------|
+SET USERNAME "kturk@yodle.com"
+SET PASSWORD "Sebago1985"
+'---------------------------------|
+
+
+'Opportunity Information
+'------------------------------------------------------------|
+SET Opportunity_Name.node "opp3"
+
+'frame in inside popup window
+SET Account_Name.node "2"
+
+SET Is_National_Acct.node "00N60000002Jhbj"
+SET Is_National_Acct.value "YES"
+
+SET Payment_Structure.node "00N60000001mJAZ"
+SET Payment_Structure.value "Corporate Spend"
+
+SET Opportunity_Type.node "opp5"
+SET Opportunity_Type.value "National"
+
+SET Opportunity_Stage.node "opp11"
+SET Opportunity_Stage.value "Contract Signed"
+
+SET Lead_Source.node "opp6"
+SET Lead_Source.value "National"
+
+SET Close_Date.node "opp9"
+SET Close_Date.value "6/12/2013"
+
+'------------------------------------------------------------|
+'/Opportunity Information
+
+
+'Corporate Fees & Charges
+'------------------------------------------------------------|
+SET Corporate_Setup_Fees.node "00N60000002K6mO"
+SET Corporate_Setup_Fees.value "55"
+
+SET Corporate_Website_Fees.node "00N60000002K6mT"
+SET Corporate_Website_Fees.value "0"
+
+SET Corporate_Monthly_Mgmt_Fees.node "00N60000002K6mY"
+SET Corporate_Monthly_Mgmt_Fees.value "40"
+
+SET Corporate_Monthly_PPC_Budget.node "00N60000002K6md"
+SET Corporate_Monthly_PPC_Budget.value "0"
+
+SET Corporate_Monthly_Organic_Fees.node "00N60000002K6mi"
+SET Corporate_Monthly_Organic_Fees.value "49"
+
+SET Corporate_Display_Fees.node "00N60000002K6mn"
+SET Corporate_Display_Fees.value "0"
+
+SET National_Contract_Length.node "00N60000002KBil"
+SET National_Contract_Length.value "24"
+
+SET Total_Corp_Owned_Locations.node "00N60000001mKgC"
+SET Total_Corp_Owned_Locations.value "186"
+
+SET Total_Franchised_Locations.node "00N60000001mKg8"
+SET Total_Franchised_Locations.value "0"
+
+SET Total_Dealers.node "00N60000001nm9m"
+SET Total_Dealers.value "0"
+'------------------------------------------------------------|
+'/Corporate Fees & Charges
+
+
+'Basic Info Tab (YL)
+'------------------------------------------------------------|
+SET Sales_Rep.node "salesRepId"
+SET Sales_Rep.value "Ari Katz"
+
+SET Segment_Name.node "segmentName"
+SET Segment_Name.value "Dentist"
+
+SET YL_Corporate_Account.node "relationshipId"
+SET YL_Corporate_Account.value "Affordable Dentures"
+
+SET YL_First_name.node "firstname"
+SET YL_Last_name.node "lastname"
+SET YL_Email.node "contactEmail"
+SET YL_Phone.node "contactPhone"
+'------------------------------------------------------------|
+
+
+'Product Selection Tab (YL)
+'------------------------------------------------------------|
+SET YL_Contract_Length.node "contractLengthValue"
+SET YL_Contract_Length.value "TWELVE_MONTH"
+
+SET YL_Organic_Monthly_Fee.node "outrank-fee-txt"
+SET YL_Organic_Monthly_Fee.node2 "outrank-fee-input"
+SET YL_Organic_Monthly_Fee.value "49"
+
+SET YL_YDL_Web_Monthly_Fee.node "yodle-web-fee-txt"
+SET YL_YDL_Web_Monthly_Fee.node2 "yodle-web-fee-input"
+SET YL_YDL_Web_Monthly_Fee.value "40"
+
+SET YL_YDL_Web_Fee.node "web-fee-txt"
+SET YL_YDL_Web_Fee.node2 "web-fee-input"
+SET YL_YDL_Web_Fee.value "0"
+
+SET YL_YDL_Account_Fee.node "setup-fee-txt"
+SET YL_YDL_Account_Fee.node2 "setup-fee-input"
+SET YL_YDL_Account_Fee.value "55"
+'------------------------------------------------------------|
+
+
+'Contract & Payment (YL)
+'------------------------------------------------------------|
+SET YL_Payment_Type.node "paymentType"
+SET YL_Payment_Type.value "YODLE_FINANCIAL_ACCOUNT"
+
+SET YL_Street_Address.node "addressStreet1"
+SET YL_City.node "addressCity"
+SET YL_State.node "addressState"
+SET YL_Zip.node "addressZipcode"
+'------------------------------------------------------------|
+
+
+'Additional Info (YL)
+'------------------------------------------------------------|
+SET YL_METRO_STATE.node "state-list"
+SET YL_METRO_CITY.node "metro-list"
+SET YL_Template_Id.node "templateId"
+SET YL_Template_Id.value "2139"
+SET YL_Address_Display.node "showCityStateOnlySelect"
+SET YL_Address_Display.value "Show Full Address"
+'------------------------------------------------------------|
+
+
+'//-----------/ end CONSTANTS
+
+
+
+'##### START Macro Commands () #####
+
+
+'iteration settings
+'-------------------|
+SET !TIMEOUT_PAGE 100000
+CMDLINE !DATASOURCE final.csv
+SET !LOOP 7
+SET !DATASOURCE_LINE {{!LOOP}}
+
+'clear session cookies so logins are not cached as this could potentially break the loop
+CLEAR
+TAB T=1
+'-------------------|
+
+
+'log in to salesforce ()
+'-------------------------------------|
+URL GOTO=https://login.salesforce.com/
+TAG POS=1 TYPE=INPUT:EMAIL FORM=NAME:login ATTR=ID:username CONTENT={{USERNAME}}
+SET !ENCRYPTION NO
+TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:login ATTR=ID:password CONTENT={{PASSWORD}}
+TAG POS=1 TYPE=BUTTON ATTR=ID:Login
+'-------------------------------------|
+
+
+'create a new opportunity ()
+'-------------------------------------|
+TAG POS=1 TYPE=IMG ATTR=CLASS:allTabsArrow
+TAG POS=1 TYPE=A ATTR=TXT:Opportunities
+TAG POS=1 TYPE=INPUT FORM=NAME:hotlist ATTR=TITLE:New
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:editPage ATTR=NAME:save&&VALUE:Continue
+'-------------------------------------|
+
+
+'Opportunity Information ()
+'------------------------------------------------------------|
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Opportunity_Name.node}} CONTENT={{!COL3}}
+TAG POS=1 TYPE=SELECT ATTR=ID:{{Is_National_Acct.node}} CONTENT=%{{Is_National_Acct.value}}
+TAG POS=1 TYPE=SELECT ATTR=ID:{{Payment_Structure.node}} CONTENT=%{{Payment_Structure.value}}
+TAG POS=1 TYPE=SELECT FORM=NAME:editPage ATTR=ID:{{Opportunity_Type.node}} CONTENT=%{{Opportunity_Type.value}}
+TAG POS=1 TYPE=SELECT FORM=NAME:editPage ATTR=ID:{{Lead_Source.node}} CONTENT=%{{Lead_Source.value}}
+TAG POS=1 TYPE=SELECT FORM=NAME:editPage ATTR=ID:{{Opportunity_Stage.node}} CONTENT=%{{Opportunity_Stage.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Close_Date.node}} CONTENT={{Close_Date.value}}
+'------------------------------------------------------------|
+
+
+'Corporate Fees & Charges ()
+'------------------------------------------------------------|
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Setup_Fees.node}} CONTENT={{Corporate_Setup_Fees.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Website_Fees.node}} CONTENT={{Corporate_Website_Fees.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Monthly_Mgmt_Fees.node}} CONTENT={{Corporate_Monthly_Mgmt_Fees.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Monthly_PPC_Budget.node}} CONTENT={{Corporate_Monthly_PPC_Budget.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Monthly_Organic_Fees.node}} CONTENT={{Corporate_Monthly_Organic_Fees.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Corporate_Display_Fees.node}} CONTENT={{Corporate_Display_Fees.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{National_Contract_Length.node}} CONTENT={{National_Contract_Length.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Total_Corp_Owned_Locations.node}} CONTENT={{Total_Corp_Owned_Locations.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Total_Franchised_Locations.node}} CONTENT={{Total_Franchised_Locations.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{Total_Dealers.node}} CONTENT={{Total_Dealers.value}}
+'------------------------------------------------------------|
+
+
+'Create new account ()
+'//* opens in new tab and uses frames
+'------------------------------------------------------------|
+TAG POS=1 TYPE=A ATTR=ID:opp4_lkwgt
+FRAME F=1
+TAG POS=1 TYPE=INPUT ATTR=CLASS:btn&&TITLE:New
+FRAME F=2
+TAG POS=1 TYPE=INPUT ATTR=NAME:{{Account_Name.node}} CONTENT={{!COL3}}
+TAG POS=1 TYPE=INPUT ATTR=CLASS:btn&&TITLE:Save
+'------------------------------------------------------------|
+
+
+'Finish SF setup and create in YL 2.0 ()
+'------------------------------------------------------------|
+'move back to tab with opportunity form
+TAB T=1 
+TAG POS=1 TYPE=INPUT ATTR=NAME:save&&TITLE:Save
+TAG POS=1 TYPE=INPUT ATTR=NAME:create_in_yl_natl_2
+'------------------------------------------------------------|
+
+
+'Fill out Sales Wizard in YL () ->
+
+' Log in to YL
+'------------------------------------------------------------|
+TAB T=2
+TAG POS=1 TYPE=INPUT ATTR=NAME:j_username CONTENT={{USERNAME}}
+TAG POS=1 TYPE=INPUT ATTR=NAME:j_password CONTENT={{PASSWORD}}
+TAG POS=1 TYPE=INPUT ATTR=CLASS:primary&&TYPE:submit
+'------------------------------------------------------------|
+
+'Basic Information Step(1)
+'------------------------------------------------------------|
+TAG POS=1 TYPE=SELECT ATTR=ID:{{Sales_Rep.node}} CONTENT=$*{{Sales_Rep.value}}*
+TAG POS=1 TYPE=INPUT ATTR=NAME:{{Segment_Name.node}} CONTENT={{Segment_Name.value}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_First_name.node}} CONTENT={{!COL7}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Last_name.node}} CONTENT={{!COL8}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Email.node}} CONTENT={{!COL9}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Phone.node}} CONTENT={{!COL10}}
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_Corporate_Account.node}} CONTENT=$*{{YL_Corporate_Account.value}}*
+TAG POS=1 TYPE=INPUT ATTR=ID:bus-name CONTENT=Affordable<SP>Dentures
+TAG POS=1 TYPE=INPUT ATTR=ID:nextButton
+'------------------------------------------------------------|
+
+
+'Product Selection Step(2)
+'------------------------------------------------------------|
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_Contract_Length.node}} CONTENT=%*{{YL_Contract_Length.value}}*
+
+TAG POS=1 TYPE=INPUT ATTR=ID:monthly-budget CONTENT={{!COL14}}
+
+TAG POS=1 TYPE=SPAN ATTR=ID:{{YL_Organic_Monthly_Fee.node}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Organic_Monthly_Fee.node2}} CONTENT={{YL_Organic_Monthly_Fee.value}}
+
+TAG POS=1 TYPE=SPAN ATTR=ID:{{YL_YDL_Web_Monthly_Fee.node}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_YDL_Web_Monthly_Fee.node2}} CONTENT={{YL_YDL_Web_Monthly_Fee.value}}
+
+TAG POS=1 TYPE=SPAN ATTR=ID:{{YL_YDL_Web_Fee.node}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_YDL_Web_Fee.node2}} CONTENT={{YL_YDL_Web_Fee.value}}
+
+TAG POS=1 TYPE=SPAN ATTR=ID:{{YL_YDL_Account_Fee.node}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_YDL_Account_Fee.node2}} CONTENT={{YL_YDL_Account_Fee.value}}
+
+TAG POS=1 TYPE=INPUT ATTR=ID:nextButton
+'------------------------------------------------------------|
+
+
+'Contact & Payment Step(3)
+'------------------------------------------------------------|
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_Payment_Type.node}} CONTENT=%*{{YL_Payment_Type.value}}*
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Street_Address.node}} CONTENT={{!COL19}}
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_City.node}} CONTENT={{!COL21}}
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_State.node}} CONTENT=%*{{!COL22}}*
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Zip.node}} CONTENT={{!COL23}}
+TAG POS=1 TYPE=INPUT ATTR=ID:nextButton
+'------------------------------------------------------------|
+
+
+'Additional Information Step(4)
+'------------------------------------------------------------|
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_METRO_STATE.node}} CONTENT=%*{{!COL22}}*
+WAIT SECONDS=5
+TAG POS=1 TYPE=INPUT ATTR=ID:{{YL_Template_Id.node}} CONTENT={{YL_Template_Id.value}}
+TAG POS=1 TYPE=SELECT ATTR=ID:{{YL_Address_Display.node}} CONTENT=$*{{YL_Address_Display.value}}*
+TAG POS=1 TYPE=INPUT ATTR=ID:nextButton
+'------------------------------------------------------------|
+
+
+'Complete Sale (5)
+'------------------------------------------------------------|
+SET !EXTRACT_TEST_POPUP NO
+TAG POS=1 TYPE=TD ATTR=TXT:*&&ALIGN:left EXTRACT=TXT
+SET !VAR1 {{!EXTRACT}}
+SET !EXTRACT NULL
+TAG POS=1 TYPE=INPUT ATTR=ID:nextButton
+URL GOTO=http://live.yodle.com/app/clientconfig/myaccount/accountsetup/reviewcase?clientId={{!VAR1}}&externalView=false
+'------------------------------------------------------------|
+
+
+' FILL OUT ASW() -->
+
+'ASW SETUP ( Review Case )
+'------------------------------------------------------------|
+' none
+'------------------------------------------------------------|
+
+
+'Basic Adversite
+'------------------------------------------------------------|
+TAG POS=1 TYPE=INPUT ATTR=ID:button-next
+TAG POS=1 TYPE=INPUT ATTR=ID:serviceGroupName CONTENT={{!COL26}}
+TAG POS=1 TYPE=INPUT ATTR=ID:button-next
+'------------------------------------------------------------|
+
+
+'Basic Setup
+'------------------------------------------------------------|
+TAG POS=1 TYPE=INPUT ATTR=ID:franchiseExternalClientId CONTENT={{!COL28}}
+TAG POS=1 TYPE=INPUT ATTR=ID:addressStreet2 CONTENT={{!COL20}}
+TAG POS=1 TYPE=INPUT ATTR=ID:distributionUrl CONTENT={{!COL31}}
+TAG POS=1 TYPE=INPUT ATTR=ID:adCopyUrl CONTENT={{!COL32}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:callRecordingOn CONTENT=YES
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn CONTENT=NO
+TAG POS=1 TYPE=INPUT ATTR=ID:button-next
+'------------------------------------------------------------|
+
+
+'Business Information
+'------------------------------------------------------------|
+TAG POS=1 TYPE=INPUT ATTR=ID:tagline CONTENT={{!COL35}}
+TAG POS=1 TYPE=TEXTAREA ATTR=ID:businessDescription CONTENT={{!COL36}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:showHoursOnWebsite CONTENT=YES
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:emergency_247 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:open247-control CONTENT=NO
+TAG POS=1 TYPE=SELECT ATTR=ID:mobile CONTENT=%*stationary*
+TAG POS=1 TYPE=INPUT ATTR=ID:servingAreaTagline CONTENT={{!COL67}}
+TAG POS=1 TYPE=TEXTAREA ATTR=ID:customCampaignNotes CONTENT={{!COL68}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:namedCampaign CONTENT=YES
+TAG POS=1 TYPE=INPUT ATTR=ID:cscCompletedDate CONTENT=6/30/2013
+TAG POS=1 TYPE=INPUT ATTR=ID:projectedLaunchDate CONTENT=8/01/2013
+
+'Uncheck default selected payment option (personal check)
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:Personal_CheckPaymentOption CONTENT=NO
+
+'Payment prefs
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:CashPaymentOption CONTENT={{!COL61}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:MasterCardPaymentOption CONTENT={{!COL62}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:VisaPaymentOption CONTENT={{!COL63}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:DiscoverPaymentOption CONTENT={{!COL64}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:CareCreditPaymentOption CONTENT={{!COL65}}
+
+'Open all initially so hours can be set
+TAG POS=1 TYPE=SELECT ATTR=ID:mondayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:tuesdayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:wednesdayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:thursdayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:fridayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:saturdayStatus CONTENT=$*Hours*
+TAG POS=1 TYPE=SELECT ATTR=ID:sundayStatus CONTENT=$*Hours*
+
+'Set Hours
+TAG POS=1 TYPE=SELECT ATTR=ID:mondayOpenTime CONTENT=$*{{!COL41}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:mondayCloseTime CONTENT=$*{{!COL42}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:tuesdayOpenTime CONTENT=$*{{!COL44}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:tuesdayCloseTime CONTENT=$*{{!COL45}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:wednesdayOpenTime CONTENT=$*{{!COL47}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:wednesdayCloseTime CONTENT=$*{{!COL48}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:thursdayOpenTime CONTENT=$*{{!COL50}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:thursdayCloseTime CONTENT=$*{{!COL51}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:fridayOpenTime CONTENT=$*{{!COL53}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:fridayCloseTime CONTENT=$*{{!COL54}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:saturdayOpenTime CONTENT=$*{{!COL56}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:saturdayCloseTime CONTENT=$*{{!COL57}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:sundayOpenTime CONTENT=$*{{!COL59}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:sundayCloseTime CONTENT=$*{{!COL60}}*
+
+'Set Open/Closed (since hours are now set)
+TAG POS=1 TYPE=SELECT ATTR=ID:mondayStatus CONTENT=$*{{!COL40}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:tuesdayStatus CONTENT=$*{{!COL43}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:wednesdayStatus CONTENT=$*{{!COL46}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:thursdayStatus CONTENT=$*{{!COL49}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:fridayStatus CONTENT=$*{{!COL52}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:saturdayStatus CONTENT=$*{{!COL55}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:sundayStatus CONTENT=$*{{!COL58}}*
+
+TAG POS=1 TYPE=INPUT ATTR=ID:button-next
+'------------------------------------------------------------|
+
+
+'Organic Information
+'------------------------------------------------------------|
+TAG POS=2 TYPE=INPUT:RADIO ATTR=NAME:auto-generate-opo-fields&&VALUE:on
+TAG POS=1 TYPE=TEXTAREA ATTR=ID:existingWebsites CONTENT={{!COL74}}
+URL GOTO={{!URLCURRENT}}
+TAG POS=1 TYPE=A ATTR=ID:copyBusinessDescription
+WAIT SECONDS=5
+TAG POS=1 TYPE=INPUT ATTR=ID:button-next
+TAB CLOSEALLOTHERS
+ONDIALOG POS=1 BUTTON=OK CONTENT=
+'------------------------------------------------------------|
+
+
+
+
+
+
+
+
+
+
+
+
