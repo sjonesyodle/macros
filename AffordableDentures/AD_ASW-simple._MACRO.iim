@@ -1,0 +1,108 @@
+'CONSTANTS -->
+
+'user/pass for SF/YL
+'---------------------------------|
+SET USERNAME "kturk@yodle.com"
+SET PASSWORD "Sebago1985"
+
+'SET USERNAME "sjones@yodle.com"
+'SET PASSWORD "sjYDL123!!"
+'---------------------------------|
+
+
+'Logic --> 
+
+'iteration settings
+'-------------------|
+SET !TIMEOUT_PAGE 100000
+CMDLINE !DATASOURCE final.csv
+SET !LOOP 2
+SET !DATASOURCE_LINE {{!LOOP}}
+
+'clear session cookies so logins are not cached as this could potentially break the loop
+CLEAR
+TAB T=1
+'-------------------|
+
+
+' Log in to YL
+'------------------------------------------------------------|
+URL GOTO=https://live.yodle.com/app/login
+TAG POS=1 TYPE=INPUT ATTR=NAME:j_username CONTENT={{USERNAME}}
+TAG POS=1 TYPE=INPUT ATTR=NAME:j_password CONTENT={{PASSWORD}}
+TAG POS=1 TYPE=INPUT ATTR=CLASS:primary&&TYPE:submit
+'------------------------------------------------------------|
+
+
+'User Roles
+'------------------------------------------------------------|
+URL GOTO=http://live.yodle.com/app/clientconfig/myaccount/clientteam?clientId={{!COL1}}
+TAG POS=1 TYPE=SELECT ATTR=ID:acctMgr CONTENT=$*{{!COL3}}*
+TAG POS=1 TYPE=SELECT ATTR=ID:natAcctMgr CONTENT=$*Kate<SP>Turk*
+TAG POS=1 TYPE=BUTTON ATTR=TXT:Save
+'------------------------------------------------------------|
+
+
+'Report Settings
+'------------------------------------------------------------|
+URL GOTO=http://live.yodle.com/app/clientconfig/userreportsettings?clientId={{!COL1}}
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.useAlternateEmail1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailDailyPerformanceReports1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailWeeklyPerformanceReports1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailMonthlyPerformanceReports1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailMissedCallNotice1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailConnectedCallNotice1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailWebLeads1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailBillDateReminder1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailWebsiteTrafficReport1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailCCExpirationNotice1 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:userReportSettings.emailBillingDeclinedIfParentPays1 CONTENT=NO
+TAG POS=1 TYPE=INPUT ATTR=VALUE:Save
+'------------------------------------------------------------|
+
+
+'Call Tracking
+'------------------------------------------------------------|
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'1
+TAG POS=1 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'2
+TAG POS=2 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'3
+TAG POS=3 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'4
+TAG POS=4 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'5
+TAG POS=5 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+
+'6
+TAG POS=6 TYPE=A ATTR=HREF:leadrouting/number/update?callTrackingNumberConfigurationId*
+TAG POS=1 TYPE=INPUT:CHECKBOX ATTR=ID:whisperOn1 CONTENT=NO
+TAG POS=1 TYPE=BUTTON ATTR=CLASS:positive&&TYPE:submit
+URL GOTO=http://live.yodle.com/app/clientconfig/leadrouting?clientId={{!COL1}}
+'------------------------------------------------------------|
+
+
+
+
+
