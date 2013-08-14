@@ -1,0 +1,46 @@
+form             : <form id="entryform" method="post" enctype="multipart/form-data" name="entryform"></form> 
+
+
+Home/Global ->
+
+meta description : <textarea id="field_id_188"
+meta keywords    : <textarea id="field_id_189"
+meta title       : <input id="field_id_192"
+h1               : <input id="field_id_193"
+yodle id         : <input id="field_id_195"
+tracking         : <textarea id="field_id_213"
+
+
+---- SERVICES ----
+
+Dentures ->
+
+meta description : <textarea id="field_id_198"
+meta keywords    : <textarea id="field_id_199"
+meta title       : <input id="field_id_197"
+h1               : <input id="field_id_209"
+content          : <textarea id="field_id_200"
+
+------
+
+Partial Dentures ->
+
+meta description : textarea id="field_id_202"
+meta keywords    : <textarea id="field_id_203"
+meta title       : <input id="field_id_201"
+h1               : <input id="field_id_210
+content          : <textarea id="field_id_204"
+
+------
+
+
+Denture Repair -> 
+
+meta description : <textarea id="field_id_206"
+meta keywords    : <textarea id="field_id_207"
+meta title       : <input id="field_id_205"
+h1               : <input id="field_id_211"
+content          : field_id_208"
+
+
+

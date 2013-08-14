@@ -20,7 +20,7 @@ var processes = {
 				util      = __utils__,
 
 				updateNode = "#siteImplType",
-				updateVal  = "CLIENT_HOSTED",
+				updateVal  = "YODLE_ADVERSITE",
 
 				passed = false;
 
@@ -54,10 +54,6 @@ var processes = {
 			__utils__.mouseEvent("click", ".special button[onclick*='showModal']" );
 		});
 
-		this.casper.wait(5000, function(){
-			this.capture("testing.jpg");
-		});
-
 		
 		this.casper.waitUntilVisible("button.positive", function(){
 			
@@ -70,12 +66,16 @@ var processes = {
 		}, 10000);
 
 
-		this.casper.wait(8000, function(){
-
+		this.casper.wait(10000, function(){
 			var test = this.evaluate(function(){
 				var val = (document.querySelectorAll("#implType")[0].innerHTML).toLowerCase();
-				return val.indexOf("client") > -1;
+
+				__utils__.echo( val );
+
+				return val.indexOf("adversite") > -1;
 			});
+
+			this.echo( test );
 
 			if ( !test ) this.die("Update Failed");
 			else this.echo("UPDATE COMPLETE :)");
