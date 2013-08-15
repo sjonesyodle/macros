@@ -15,7 +15,7 @@ module.exports = {
 		node : "#field_id_195"
 	},
 
-	tracking_js : {
+	tracking : {
 		required : true,
 		node : "#field_id_213"
 	},
