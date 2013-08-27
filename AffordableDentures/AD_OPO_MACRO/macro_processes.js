@@ -124,8 +124,6 @@ var processes = {
 		this.casper.then(function(){
 			var i, nodeVal, err = [];
 
-			this.echo("test");
-
 			for ( i in model ) {
 				nodeVal = util.trim( document.querySelectorAll(model[i].node).innerHTML );
 				this.echo( nodeVal );
