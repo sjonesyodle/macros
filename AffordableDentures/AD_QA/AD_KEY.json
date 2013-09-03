@@ -1,0 +1,912 @@
+[
+	{
+		"client_id": "108759",
+		"doctor": "Reginald F. Rose, DMD",
+		"geo": "Pell CIty, AL"
+	},
+	{
+		"client_id": "108761",
+		"doctor": "Kevin D. Givens, DDS",
+		"geo": "Tucson, AZ"
+	},
+	{
+		"client_id": "108766",
+		"doctor": "Samuel A. McGuire, DMD",
+		"geo": "Kalamazoo, MI"
+	},
+	{
+		"client_id": "108767",
+		"doctor": "Walter E. Schneider, DDS",
+		"geo": "Longmont, CO"
+	},
+	{
+		"client_id": "108768",
+		"doctor": "Eric J. Amundson, DDS",
+		"geo": "Tallahassee, FL"
+	},
+	{
+		"client_id": "108769",
+		"doctor": "Kenneth D. Sullivan, DMD",
+		"geo": "Cape Girardeau, MO"
+	},
+	{
+		"client_id": "108770",
+		"doctor": "Paul D. Larsen, DDS",
+		"geo": "Peoria, IL"
+	},
+	{
+		"client_id": "108771",
+		"doctor": "Thomas Michael O'Hara, DDS",
+		"geo": "Bellevue, NE"
+	},
+	{
+		"client_id": "108773",
+		"doctor": "Saima Yusaf, DDS",
+		"geo": "Rockford, IL"
+	},
+	{
+		"client_id": "108774",
+		"doctor": "Michael R. McClure, DDS",
+		"geo": "St. Clairsville, OH"
+	},
+	{
+		"client_id": "108775",
+		"doctor": "Nicole A. Middleton, DDS",
+		"geo": "Bowling Green, KY"
+	},
+	{
+		"client_id": "108776",
+		"doctor": "Sherri J. Dale McGee, DDS",
+		"geo": "Jessup, MD"
+	},
+	{
+		"client_id": "108777",
+		"doctor": "Arlene A. Kellum, DDS",
+		"geo": "Bluff City, TN"
+	},
+	{
+		"client_id": "122183",
+		"doctor": "Jennifer Alston-Sako, DDS",
+		"geo": "Bedford, VA"
+	},
+	{
+		"client_id": "122188",
+		"doctor": "David E. Riddick, DDS",
+		"geo": "Hopkinsville, KY"
+	},
+	{
+		"client_id": "122191",
+		"doctor": "Steven B. Nicholas, DDS",
+		"geo": "Barboursville, WV"
+	},
+	{
+		"client_id": "122193",
+		"doctor": "J. Haywood Baker, DMD",
+		"geo": "Albertville, AL"
+	},
+	{
+		"client_id": "122196",
+		"doctor": "William Y. Young, DDS",
+		"geo": "Commerce, GA"
+	},
+	{
+		"client_id": "122200",
+		"doctor": "Randle L. Wells, DDS",
+		"geo": "Augusta, GA"
+	},
+	{
+		"client_id": "122201",
+		"doctor": "Warren David Inge, DDS",
+		"geo": "Covington, GA"
+	},
+	{
+		"client_id": "122203",
+		"doctor": "Scott A. Brundrett, DDS",
+		"geo": "Carrollton, GA"
+	},
+	{
+		"client_id": "122207",
+		"doctor": "Juan E. Reid, DDS",
+		"geo": "Columbus, GA"
+	},
+	{
+		"client_id": "122209",
+		"doctor": "Olajumoke O. Adedoyin, DDS",
+		"geo": "Cartersville, GA"
+	},
+	{
+		"client_id": "122211",
+		"doctor": "James J. Goodpaster, DMD",
+		"geo": "Bloomington, IN"
+	},
+	{
+		"client_id": "122214",
+		"doctor": "Linda S. Wick, DDS",
+		"geo": "Franklin, IN"
+	},
+	{
+		"client_id": "122218",
+		"doctor": "Kenneth D. Garrett, DDS",
+		"geo": "Muncie, IN"
+	},
+	{
+		"client_id": "122221",
+		"doctor": "Rudy E. Bianco, DDS",
+		"geo": "Mishawaka, IN"
+	},
+	{
+		"client_id": "122230",
+		"doctor": "Mark H. Cleary, DDS",
+		"geo": "Zanesville, OH"
+	},
+	{
+		"client_id": "122240",
+		"doctor": "John H. Knowles, DDS",
+		"geo": "Wichita Falls, TX"
+	},
+	{
+		"client_id": "122248",
+		"doctor": "Andrew Winslow McDaniel, DMD",
+		"geo": "Lubbock, TX"
+	},
+	{
+		"client_id": "122251",
+		"doctor": "Raeline K. McIntyre, DMD",
+		"geo": "Gulfport, MS"
+	},
+	{
+		"client_id": "122254",
+		"doctor": "Marshall J. Belmer, DDS",
+		"geo": "Orland Park, IL"
+	},
+	{
+		"client_id": "122255",
+		"doctor": "Rebecca J. Swenson, DDS",
+		"geo": "Green Bay, WI"
+	},
+	{
+		"client_id": "122256",
+		"doctor": "Eric J. DeShazer, DDS",
+		"geo": "Lincoln, NE"
+	},
+	{
+		"client_id": "122259",
+		"doctor": "Jon Craig Munoz, DDS",
+		"geo": "West Des Moines, IA"
+	},
+	{
+		"client_id": "122261",
+		"doctor": "Charles Meyer Gooss, DMD",
+		"geo": "Yakima, WA"
+	},
+	{
+		"client_id": "122268",
+		"doctor": "Gary R. Herron II, DDS",
+		"geo": "Albuquerque, NM"
+	},
+	{
+		"client_id": "124893",
+		"doctor": "Shaun O'Hearn, DDS",
+		"geo": "Asheville, NC"
+	},
+	{
+		"client_id": "124898",
+		"doctor": "Carl A. Gentry, DDS",
+		"geo": "Fayetteville, NC"
+	},
+	{
+		"client_id": "124899",
+		"doctor": "Ward S. Lambeth, DDS",
+		"geo": "Colfax, NC"
+	},
+	{
+		"client_id": "124900",
+		"doctor": "Robin Edwards, DDS",
+		"geo": "Kinston, NC"
+	},
+	{
+		"client_id": "124901",
+		"doctor": "Bruce Gray, DDS",
+		"geo": "Durham, NC"
+	},
+	{
+		"client_id": "124902",
+		"doctor": "Walter J. Wulf, DDS",
+		"geo": "Wilmington, NC"
+	},
+	{
+		"client_id": "124903",
+		"doctor": "Larissa M. Mastro, DDS",
+		"geo": "Conover, NC"
+	},
+	{
+		"client_id": "124904",
+		"doctor": "Kay Wiles, DDS",
+		"geo": "Jackson, TN"
+	},
+	{
+		"client_id": "124905",
+		"doctor": "Rupinder Mann, DMD",
+		"geo": "Harrisburg, PA"
+	},
+	{
+		"client_id": "124906",
+		"doctor": "Steven Krahl, DMD",
+		"geo": "Wilkes-Barre, PA"
+	},
+	{
+		"client_id": "124907",
+		"doctor": "Ramesh M. Shah",
+		"geo": "Philadelphia, PA"
+	},
+	{
+		"client_id": "124908",
+		"doctor": "Michelle Lynn Aitken, DDS",
+		"geo": "West Collingswood Heights, NJ"
+	},
+	{
+		"client_id": "124909",
+		"doctor": "Hye-Eun Grace Kim, DMD",
+		"geo": "Ewing, NJ"
+	},
+	{
+		"client_id": "124910",
+		"doctor": "Michelle Lynn Aitken, DDS",
+		"geo": "Vineland, NJ"
+	},
+	{
+		"client_id": "124912",
+		"doctor": "Jeffrey Lee Martin, DDS",
+		"geo": "Shreveport, LA"
+	},
+	{
+		"client_id": "124913",
+		"doctor": "Donovan J. Smith, DDS",
+		"geo": "Scott, LA"
+	},
+	{
+		"client_id": "124914",
+		"doctor": "Corey A. Robertson, DDS",
+		"geo": "Baton Rouge, LA"
+	},
+	{
+		"client_id": "124915",
+		"doctor": "Jeetendra S. Patel, DDS",
+		"geo": "Monroe, LA"
+	},
+	{
+		"client_id": "124916",
+		"doctor": "Marcus K. Jackson, DDS",
+		"geo": "Metairie, LA"
+	},
+	{
+		"client_id": "124917",
+		"doctor": "Valerie H. Washington, DDS",
+		"geo": "Pineville, LA"
+	},
+	{
+		"client_id": "124918",
+		"doctor": "Tommy Hillman, DDS",
+		"geo": "Lake Charles, LA"
+	},
+	{
+		"client_id": "124919",
+		"doctor": "Charles Coleman, DMD",
+		"geo": "Covington, LA"
+	},
+	{
+		"client_id": "124920",
+		"doctor": "Blake G. Sinclair, DDS",
+		"geo": "Nacogdoches, TX"
+	},
+	{
+		"client_id": "124921",
+		"doctor": "Cameron K. Blair, DDS",
+		"geo": "Mesquite, TX"
+	},
+	{
+		"client_id": "124922",
+		"doctor": "Chukym Alexis-Johnson, DDS",
+		"geo": "Vestal, NY"
+	},
+	{
+		"client_id": "124923",
+		"doctor": "Gloria V. Williams, DDS",
+		"geo": "Albany, NY"
+	},
+	{
+		"client_id": "124924",
+		"doctor": "Edward Huddleston III, DDS",
+		"geo": "Rochester, NY"
+	},
+	{
+		"client_id": "124925",
+		"doctor": "P. Hiram Rodriguez, DDS",
+		"geo": "Bakersfield, CA"
+	},
+	{
+		"client_id": "124926",
+		"doctor": "Caroline Le, DDS",
+		"geo": "Redlands, CA"
+	},
+	{
+		"client_id": "124929",
+		"doctor": "Farhad Kiani, DDS",
+		"geo": "Jackson, CA"
+	},
+	{
+		"client_id": "124930",
+		"doctor": "Patricia Bezad, DMD",
+		"geo": "Yuba City, CA"
+	},
+	{
+		"client_id": "124932",
+		"doctor": "Marino Alea Iglesias, DDS",
+		"geo": "Tracy, CA"
+	},
+	{
+		"client_id": "124933",
+		"doctor": "Talya Mintz, DDS",
+		"geo": "Rochester, MN"
+	},
+	{
+		"client_id": "124934",
+		"doctor": "Mayra Soler, DDS",
+		"geo": "Brooklyn Park, MN"
+	},
+	{
+		"client_id": "124935",
+		"doctor": "Frank Gerber, BChD",
+		"geo": "Duluth, MN"
+	},
+	{
+		"client_id": "124936",
+		"doctor": "David R. Hudnall, DMD",
+		"geo": "Greenville, SC"
+	},
+	{
+		"client_id": "124937",
+		"doctor": "David R. Hudnall, DMD",
+		"geo": "Anderson, SC"
+	},
+	{
+		"client_id": "124938",
+		"doctor": "David R. Hudnall, DMD",
+		"geo": "Greenwood, SC"
+	},
+	{
+		"client_id": "124939",
+		"doctor": "Cher Y. Chang, DMD",
+		"geo": "Las Vegas, NV"
+	},
+	{
+		"client_id": "144391",
+		"doctor": "Michael D. Harris, DMD",
+		"geo": "Springfield, OR"
+	},
+	{
+		"client_id": "146420",
+		"doctor": "Anne Steinberg, DMD",
+		"geo": "Boise, ID"
+	},
+	{
+		"client_id": "149314",
+		"doctor": "Danny Truong, DDS",
+		"geo": "El Cajon, CA"
+	},
+	{
+		"client_id": "152848",
+		"doctor": "Jeffrey L. Martin, DDS",
+		"geo": "Texarkana, TX"
+	},
+	{
+		"client_id": "156014",
+		"doctor": "C. Gregory Martin, DDS",
+		"geo": "Charlotte, NC"
+	},
+	{
+		"client_id": "156024",
+		"doctor": "Dennis D. Gaskin, DDS",
+		"geo": "Moyock, NC"
+	},
+	{
+		"client_id": "156025",
+		"doctor": "Steven M. Hedges, DMD",
+		"geo": "Chester, VA"
+	},
+	{
+		"client_id": "156026",
+		"doctor": "John J. Doyle, DDS",
+		"geo": "Rocky Gap, VA"
+	},
+	{
+		"client_id": "156027",
+		"doctor": "Eric Y. Lee, DDS",
+		"geo": "Winchester, VA"
+	},
+	{
+		"client_id": "156063",
+		"doctor": "Mesfin W. Zelleke, DDS",
+		"geo": "Woodbridge, VA"
+	},
+	{
+		"client_id": "156064",
+		"doctor": "Lynne C. Faxio, DDS",
+		"geo": "Suffolk, VA"
+	},
+	{
+		"client_id": "156065",
+		"doctor": "Dennis D. Gaskin, DDS",
+		"geo": "Virginia Beach, VA"
+	},
+	{
+		"client_id": "156068",
+		"doctor": "James I. Vinson, DDS",
+		"geo": "Cookeville, TN"
+	},
+	{
+		"client_id": "156071",
+		"doctor": "Michael E. Doyle, DDS",
+		"geo": "Loudon, TN"
+	},
+	{
+		"client_id": "156074",
+		"doctor": "Patrick J. McNamara, DDS",
+		"geo": "Chattanooga, TN"
+	},
+	{
+		"client_id": "156075",
+		"doctor": "Harold G. Speer Jr., DDS",
+		"geo": "Burns, TN"
+	},
+	{
+		"client_id": "156076",
+		"doctor": "Andrew M. Burton III, DDS",
+		"geo": "Nashville, TN"
+	},
+	{
+		"client_id": "156078",
+		"doctor": "Grace E. Speer, DDS",
+		"geo": "Memphis, TN"
+	},
+	{
+		"client_id": "156083",
+		"doctor": "Stephen Rogers Daniel, DDS",
+		"geo": "Morristown, TN"
+	},
+	{
+		"client_id": "156086",
+		"doctor": "Marvo C. Odds, DDS",
+		"geo": "Shelbyville, TN"
+	},
+	{
+		"client_id": "156092",
+		"doctor": "Rodney Alan Stevens, DMD",
+		"geo": "Florence, KY"
+	},
+	{
+		"client_id": "156094",
+		"doctor": "Anna K. Miller, DMD",
+		"geo": "Richmond, KY"
+	},
+	{
+		"client_id": "156095",
+		"doctor": "Larry D. Thomas, DMD",
+		"geo": "Shepherdsville, KY"
+	},
+	{
+		"client_id": "156096",
+		"doctor": "Gerald L. Fairchild, DMD",
+		"geo": "Morehead, KY"
+	},
+	{
+		"client_id": "156097",
+		"doctor": "Rita Bobb-Rollins, DDS",
+		"geo": "Bridgeport, WV"
+	},
+	{
+		"client_id": "156098",
+		"doctor": "Marian A. Bryant, DMD",
+		"geo": "Madison, AL"
+	},
+	{
+		"client_id": "156101",
+		"doctor": "Robert M. Gaskin, DDS",
+		"geo": "Montgomery, AL"
+	},
+	{
+		"client_id": "156106",
+		"doctor": "Shai H. Miles, DDS",
+		"geo": "Dothan, AL"
+	},
+	{
+		"client_id": "156107",
+		"doctor": "Katherine W. Merrill, DMD",
+		"geo": "Florence, AL"
+	},
+	{
+		"client_id": "156109",
+		"doctor": "Kevin D. Hancock, DMD",
+		"geo": "Tuscaloosa, AL"
+	},
+	{
+		"client_id": "156113",
+		"doctor": "Timmi J. Hagan, DMD",
+		"geo": "Macon, GA"
+	},
+	{
+		"client_id": "156116",
+		"doctor": "Christopher Selders, DDS",
+		"geo": "Pooler, GA"
+	},
+	{
+		"client_id": "156120",
+		"doctor": "Deborah Ann Beal, DDS",
+		"geo": "Albany, GA"
+	},
+	{
+		"client_id": "156122",
+		"doctor": "Oletha Simmons, DDS",
+		"geo": "LaGrange, GA"
+	},
+	{
+		"client_id": "156125",
+		"doctor": "Christopher Nigh, DDS",
+		"geo": "Evansville, IN"
+	},
+	{
+		"client_id": "156126",
+		"doctor": "Glen D. Middaugh, DDS",
+		"geo": "Terre Haute, IN"
+	},
+	{
+		"client_id": "156131",
+		"doctor": "Dawn J. Benson, DDS",
+		"geo": "Fort Wayne, IN"
+	},
+	{
+		"client_id": "156133",
+		"doctor": "David J. Bruns, DDS",
+		"geo": "Lafayette, IN"
+	},
+	{
+		"client_id": "156135",
+		"doctor": "Magali Padilla-Zapata, DMD",
+		"geo": "Lima, OH"
+	},
+	{
+		"client_id": "156136",
+		"doctor": "Stephen C. Durham, DMD",
+		"geo": "Franklin, OH"
+	},
+	{
+		"client_id": "156138",
+		"doctor": "Joseph B. Walton, DDS",
+		"geo": "Chillicothe, OH"
+	},
+	{
+		"client_id": "156143",
+		"doctor": "Todd N. Corbitt, DDS",
+		"geo": "Columbus, OH"
+	},
+	{
+		"client_id": "156144",
+		"doctor": "Eric L. Snyder, DMD",
+		"geo": "Poland, OH"
+	},
+	{
+		"client_id": "156145",
+		"doctor": "Ruby E. Fifer, DDS",
+		"geo": "Sylvania, OH"
+	},
+	{
+		"client_id": "156146",
+		"doctor": "Leotis Richardson III, DDS",
+		"geo": "Conway, AR"
+	},
+	{
+		"client_id": "156148",
+		"doctor": "Marino Alea Iglesias, DDS",
+		"geo": "Little Rock, AR"
+	},
+	{
+		"client_id": "156149",
+		"doctor": "Anthony F. Williams, DDS",
+		"geo": "Independence, MO"
+	},
+	{
+		"client_id": "156150",
+		"doctor": "Karen T. Mays, DDS",
+		"geo": "Columbia, MO"
+	},
+	{
+		"client_id": "156151",
+		"doctor": "Dr. Mark L. Trulsson",
+		"geo": "Saint Joseph, MO"
+	},
+	{
+		"client_id": "156152",
+		"doctor": "Christopher A. Parks, DDS",
+		"geo": "Sullivan, MO"
+	},
+	{
+		"client_id": "156153",
+		"doctor": "DeAndrae W. Alexander, DDS",
+		"geo": "Austin, TX"
+	},
+	{
+		"client_id": "156156",
+		"doctor": "Jay Quigley, DDS",
+		"geo": "Beaumont, TX"
+	},
+	{
+		"client_id": "156157",
+		"doctor": "Jayesh S. Patel, DDS",
+		"geo": "Waco, TX"
+	},
+	{
+		"client_id": "156159",
+		"doctor": "James J. Kloer, DDS",
+		"geo": "Odessa, TX"
+	},
+	{
+		"client_id": "156163",
+		"doctor": "Mimi Butterfly Harmon, DDS",
+		"geo": "Amarillo, TX"
+	},
+	{
+		"client_id": "156165",
+		"doctor": "Blake G. Sinclair, DDS",
+		"geo": "Tyler, TX"
+	},
+	{
+		"client_id": "156167",
+		"doctor": "Richard A. Wilson, DDS",
+		"geo": "Conroe, TX"
+	},
+	{
+		"client_id": "156168",
+		"doctor": "Sandhya R. Kondapaneni , DDS",
+		"geo": "Sugarland, TX"
+	},
+	{
+		"client_id": "156170",
+		"doctor": "Jeanine Eaton, DDS",
+		"geo": "Friendswood, TX"
+	},
+	{
+		"client_id": "156171",
+		"doctor": "Carlos A. Valladares, DDS",
+		"geo": "New Braunfels, TX"
+	},
+	{
+		"client_id": "156172",
+		"doctor": "Joyce Marie Byrd, DDS",
+		"geo": "Flowood, MS"
+	},
+	{
+		"client_id": "156176",
+		"doctor": "James A. Jones, DDS",
+		"geo": "Tupelo, MS"
+	},
+	{
+		"client_id": "156178",
+		"doctor": "Reuben R. Little II, DDS",
+		"geo": "Meridian, MS"
+	},
+	{
+		"client_id": "156181",
+		"doctor": "Stephanie A. Campbell, DDS",
+		"geo": "Lansing, MI"
+	},
+	{
+		"client_id": "156184",
+		"doctor": "Shawn A. May, DDS",
+		"geo": "Forsyth, IL"
+	},
+	{
+		"client_id": "156186",
+		"doctor": "Steven R. Pletscher, DDS",
+		"geo": "East Moline, IL"
+	},
+	{
+		"client_id": "156189",
+		"doctor": "Leif Engles, DDS",
+		"geo": "Litchfield, IL"
+	},
+	{
+		"client_id": "156191",
+		"doctor": "Jeff Turner, DDS",
+		"geo": "Pensacola, FL"
+	},
+	{
+		"client_id": "156194",
+		"doctor": "Carlo Joseph Rumbolo, DMD",
+		"geo": "Fort Myers, FL"
+	},
+	{
+		"client_id": "156196",
+		"doctor": "Stephan M. Showstark, DMD",
+		"geo": "Gainesville, FL"
+	},
+	{
+		"client_id": "156200",
+		"doctor": "Jase R. Hackney, DMD",
+		"geo": "Tampa, FL"
+	},
+	{
+		"client_id": "156202",
+		"doctor": "Craig A. Smith, DMD",
+		"geo": "Ocoee, FL"
+	},
+	{
+		"client_id": "156204",
+		"doctor": "Gust G. Kapetan, DMD",
+		"geo": "Port St. Lucie, FL"
+	},
+	{
+		"client_id": "156206",
+		"doctor": "Gust G. Kapetan, DMD",
+		"geo": "West Palm Beach, FL"
+	},
+	{
+		"client_id": "156209",
+		"doctor": "Cesar M. Pareja, DMD",
+		"geo": "West Melbourne, FL"
+	},
+	{
+		"client_id": "156211",
+		"doctor": "Charles R. Gillam, DMD",
+		"geo": "Sarasota, FL"
+	},
+	{
+		"client_id": "156214",
+		"doctor": "Adrian A. Attkisson, DMD",
+		"geo": "Jacksonville, FL"
+	},
+	{
+		"client_id": "156216",
+		"doctor": "Jeffrey Friefeld, DDS",
+		"geo": "Pembroke Pines, FL"
+	},
+	{
+		"client_id": "156217",
+		"doctor": "Rollins L. Clary, DMD",
+		"geo": "Daytona Beach, FL"
+	},
+	{
+		"client_id": "156218",
+		"doctor": "T.V. Pham, DMD",
+		"geo": "Lakeland, FL"
+	},
+	{
+		"client_id": "156220",
+		"doctor": "James P. Muir, DDS",
+		"geo": "Weeki Wachee, FL"
+	},
+	{
+		"client_id": "156221",
+		"doctor": "William C. Knapke, DDS",
+		"geo": "Panama City, FL"
+	},
+	{
+		"client_id": "156222",
+		"doctor": "Marc A. Sander, DDS",
+		"geo": "Avon Park, FL"
+	},
+	{
+		"client_id": "156225",
+		"doctor": "Daniel A. Martin, DMD",
+		"geo": "South Burlington, VT"
+	},
+	{
+		"client_id": "156226",
+		"doctor": "Donald A. Kraut, DDS",
+		"geo": "Madison, WI"
+	},
+	{
+		"client_id": "156227",
+		"doctor": "Jeffery J. Becker, DDS",
+		"geo": "Milwaukee, WI ’_, WI"
+	},
+	{
+		"client_id": "156231",
+		"doctor": "Phillip Douglas, DDS",
+		"geo": "Eau Claire, WI"
+	},
+	{
+		"client_id": "156233",
+		"doctor": "Carl Martin Kendrick Jr, DMD",
+		"geo": "Sioux City, IA"
+	},
+	{
+		"client_id": "156235",
+		"doctor": "Janet S. Tresnak, DDS",
+		"geo": "Cedar Rapids, IA"
+	},
+	{
+		"client_id": "156237",
+		"doctor": "Lisa D. Patrick, DDS",
+		"geo": "Salisbury, MD"
+	},
+	{
+		"client_id": "156239",
+		"doctor": "Tammy J. Clifford, DDS",
+		"geo": "Greenville (office is in Smithfield), RI"
+	},
+	{
+		"client_id": "156241",
+		"doctor": "James K. Thornton, DMD",
+		"geo": "Myrtle Beach, SC"
+	},
+	{
+		"client_id": "156242",
+		"doctor": "J.E. Cauley, DMD",
+		"geo": "North Charleston, SC"
+	},
+	{
+		"client_id": "156244",
+		"doctor": "David R. Hudnall, DMD",
+		"geo": "Columbia, SC"
+	},
+	{
+		"client_id": "156245",
+		"doctor": "Cemeron L. Longstreet, DDS",
+		"geo": "Rock Hill, SC"
+	},
+	{
+		"client_id": "156250",
+		"doctor": "Willam M. Wilden, DDS",
+		"geo": "Spokane Valley, WA"
+	},
+	{
+		"client_id": "156254",
+		"doctor": "Beverly Goodman, DDS",
+		"geo": "Tacoma, WA"
+	},
+	{
+		"client_id": "156257",
+		"doctor": "Keith Salvatori, DMD",
+		"geo": "Burlington, WA"
+	},
+	{
+		"client_id": "156258",
+		"doctor": "Sibera Troy Brannon, DDS",
+		"geo": "Sun City, AZ"
+	},
+	{
+		"client_id": "156260",
+		"doctor": "Mun Jun Choi, DDS",
+		"geo": "Colorado Springs, CO"
+	},
+	{
+		"client_id": "156261",
+		"doctor": "Annette M. Pearson, DDS",
+		"geo": "Wilsonville, OR"
+	},
+	{
+		"client_id": "156264",
+		"doctor": "Tiana Hall, DDS",
+		"geo": "Riverdale, UT"
+	},
+	{
+		"client_id": "156265",
+		"doctor": "J. David Adams, DMD",
+		"geo": "American Fork, UT"
+	},
+	{
+		"client_id": "156268",
+		"doctor": "Changa H. Cannon, DDS",
+		"geo": "Tulsa, OK"
+	},
+	{
+		"client_id": "156269",
+		"doctor": "David N. Wexler, DDS",
+		"geo": "Topeka, KS"
+	},
+	{
+		"client_id": "156578",
+		"doctor": "Yolanda C. Robinson, DDS",
+		"geo": "South Hill, VA"
+	}
+]

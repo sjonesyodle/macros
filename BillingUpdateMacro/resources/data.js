@@ -1,0 +1,1 @@
+module.exports = JSON.parse( fs.read("./resources/data.json") );
