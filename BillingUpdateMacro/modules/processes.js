@@ -40,7 +40,7 @@ module.exports = {
 		var
 		that     = this,
 		casper   = that.casper,
-		billDate =  "1",
+		billDate =  "5",
 		node     = "#newClientBillDay";
 
 		casper.then(function(){
@@ -77,7 +77,7 @@ module.exports = {
 
 		casper.reload(function(){
 			var 
-			billDate =  "1",
+			billDate =  "5",
 			node     = "#newClientBillDay";
 
 			var test = this.evaluate(function(node){
